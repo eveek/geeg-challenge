@@ -1,0 +1,113 @@
+@import "../../styles/variables.scss";
+
+
+.light {
+    color: $main-color;
+    section.box {
+        .middle {
+            span {
+                &:last-child {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+.dark {
+    color: $main-bg;
+    section.box {
+        .middle {
+            span {
+                &:last-child {
+                    color: $main-bg;
+                }
+            }
+        }
+    }
+}
+
+
+section.box {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .head {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+
+        div {
+            &:first-child {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: 0.714px solid $chart-icon-border;
+                display: grid;
+                place-items: center;
+
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+            text-align: left;
+            &:first-child {
+                font-size: 18px;
+                color: $data-grey;
+            }
+
+            &:last-child {
+                font-size: 24px;
+                // color: $main-color;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &:first-child {
+                font-size: 12px;
+                padding: 4px 8px;
+                gap: 4px;
+                width: fit-content;
+                border-radius: 100px;
+                height: 24px;
+                
+                &.surplus {
+                    background-color: $surplus-bg;
+                    color: $surplus-font;
+                }
+                &.deficit {
+                    background-color: $deficit-bg;
+                    color: $deficit-font;
+                }
+            }
+
+            &:last-child {
+                font-size: 14px;
+                color: $data-grey;
+                text-align: left;
+                width: fit-content;
+            }
+        }
+    }
+}

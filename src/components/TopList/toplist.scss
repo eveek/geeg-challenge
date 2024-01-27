@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+
+
+
+.light {
+    .List {
+        .head {
+            .One {
+                color: $main-color;
+            }
+        }
+        section {
+            h3 {
+                color: $main-color;
+            }
+        }
+    }
+}
+.dark {
+    .List {
+        .head {
+            .One {
+                color: $main-bg;
+            }
+        }
+        section {
+            h3 {
+                color: $main-bg;
+            }
+        }
+    }
+}
+
+.List {
+    .head {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .One {
+            font-size: 18px;
+            font-weight: 600;
+            color: $main-color;
+            width: fit-content;
+        }
+
+        .Two button {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            background-color: transparent;
+            border: none;
+            color: $green-bg;
+        }
+    }
+
+    .list {
+        display: grid;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section {
+        h3 {
+            font-size: 18px;
+            color: $main-color;
+            font-weight: 600;
+            line-height: 26px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $data-grey;
+        line-height: 20px;
+        font-size: 18px;
+    }
+
+    meter {
+        width: 100%;
+        height: 25px;
+
+        &::-webkit-meter-bar {
+            background: rgba(221, 220, 220, 0.455);
+            border: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1225px) {
+    .List {
+        .list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .List {
+        .list {
+            grid-template-columns: 1fr;
+        }
+    }
+}

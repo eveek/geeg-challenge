@@ -1,0 +1,130 @@
+@import "../../styles/variables.scss";
+
+
+
+.light {
+    .tableCont {
+        color: $main-color;
+        .head {
+            .One {
+                color: $main-color;
+            }
+        }
+    }
+}
+.dark {
+    .tableCont {
+        color: $main-bg;
+        .head {
+            .One {
+                color: $main-bg;
+            }
+        }
+    }
+}
+.tableCont {
+    .head {
+        .One {
+                font-size: 18px;
+                font-weight: 600;
+                // color: $main-color;
+                width: 100px;
+            }
+
+        .Two button {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            background-color: transparent;
+            border: none;
+            color: $green-bg;
+        }
+    }
+
+    .tablebox {
+        overflow-x: scroll;
+        display: flex;
+    }
+    table {
+        // border-collapse: collapse;
+        width: 100%;
+        // width: 771px;
+        overflow-x: scroll;
+
+        thead {
+            text-align: left;
+
+        }
+
+        tbody {
+            flex-direction: column;
+            width: 100%;
+            
+        }
+
+        td {
+            border-top: 0.1px solid $fade-color;
+
+            .person {
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 32px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        td.paid {
+            color: $surplus-font;
+            font-weight: 400;
+        }
+        td.refund {
+            font-weight: 400;
+            color: $deficit-font;
+        }
+        
+        td, th {
+            padding: 8px 0;
+            padding-right: 30px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        td .invoice{
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 16px;
+                margin-right: 5px;
+            }
+        }
+
+        th, td.date {
+            color: $fade-color;
+        }
+    }
+}
+
+
+@media screen and (max-width: 665px) {
+
+    .tablebox {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        overflow-y: auto;
+
+        // overflow: s;
+    }
+    table {
+        width: 527px;
+        // display: none;
+    }
+
+}

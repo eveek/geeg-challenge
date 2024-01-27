@@ -1,0 +1,176 @@
+@import "../../styles/variables.scss";
+
+
+.light {
+    .sidebar {
+        background-color: $nav-bg;
+    }
+}
+.dark {
+    .sidebar {
+        background-color: $dark-s-bg;
+        border: none;
+        .icon:first-child {
+            img {
+                filter: invert(80%);
+            }
+        }
+        .close {
+            button {
+                background-color: transparent;
+                filter: invert(100%);
+            }
+        }
+    }
+}
+
+.sidebar {
+    width: 80px;
+    height: 100%;
+    // min-height: 765px;
+    // max-height: 876px;
+    border-right: 1px solid $nav-border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    right: calc(100vw - 80px);
+    .logo {
+        margin-bottom: 20px;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    .scroll {
+        overflow-y: scroll;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+
+        .mainNav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .theme {
+            background-color: $white-color;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            padding: 8px;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+
+                img {
+                    width: 30px;
+                }
+
+                &:first-child {
+                    background-color: $green-bg;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+        .otherNav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .theme {
+            position: relative;
+
+
+            #light, #dark {
+                z-index: 88;
+                background-color: transparent;
+                border-radius: 50%;
+            }
+
+            #toggler {
+                width: 40px;
+                height: 40px;
+                background-color: $green-bg;
+                border-radius: 50%;
+                position: absolute;
+                top: 2px;
+                transition: top .5s;
+                // display: none;
+            }
+        }
+    }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+        display: grid;
+        place-items: center;
+
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    .close {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 916px) {
+    .sidebar {
+        left: 0;
+        // display: none;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    aside.sidebar {
+        right: -80px;
+        z-index: 100;
+        padding-top: 80px;
+        transition: right .5s;
+        box-shadow: 10px 0px 20px 3px black;
+
+        .close {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 25px;
+            button {
+                border: none;
+                img {
+                    height: 35px;
+                    width: 35px;;
+                }
+            }
+        }
+    }
+}
