@@ -12,15 +12,16 @@ const toggler = document.querySelector('#toggler');
 
 function Sidebar () {
     
-    const setight = () => {
-        // alert('hbdhbvsh')
-        themeContainer.className = 'light';
-        toggler.style.top = '2px';
-    }
-    const setDark = () => {
-        themeContainer.className = 'dark';
-        toggler.style.top = '48px';
-    }
+    // const setight = () => {
+    // //     // alert('hbdhbvsh')
+    // //     console.log(themeContainer)
+    // //     themeContainer.className = 'light';
+    //     toggler.style.top = '2px';
+    // }
+    // const setDark = () => {
+    // //     themeContainer.className = 'dark';
+    //     toggler.style.top = '48px';
+    // }
     return (
         <aside className="sidebar">
                 <div className="logo"><img src="logo.svg" alt="logo"/></div>
@@ -34,8 +35,8 @@ function Sidebar () {
                             <div className='icon'><img src="discount-shape.svg" alt="" /></div>
                             <div className='icon'><img src="info-circle.svg" alt="" /></div>
                             <div className="theme">
-                                <div onClick={setight} className='icon' id='light'><img src="brightness.svg" alt="" /></div>
-                                <div onClick={setDark} className='icon' id='dark'><img src="moon.svg" alt="" /></div>
+                                <div  className='icon' id='light'><img src="brightness.svg" alt="" /></div>
+                                <div  className='icon' id='dark'><img src="moon.svg" alt="" /></div>
                                 <div id='toggler'></div>
                             </div>
                         </div>
