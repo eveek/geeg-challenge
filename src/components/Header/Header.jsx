@@ -13,7 +13,7 @@ function Header () {
                 <div className='title'>Dashboard</div>
                 <div className='searchbox'>
                     <img src="search.svg" alt="search icon" />
-                    <input type="search" placeholder='Search...'/>
+                    <input type="text" placeholder='Search...'/>
                 </div>
             </div>
             <div className='profile'>

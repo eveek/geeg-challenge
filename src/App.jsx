@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import Home from './pages/Home/Home'
 import User from './pages/User/User';
 import Product from './pages/Product/Product';
@@ -14,12 +14,14 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [theme, updateTheme] = useState('light')
+
 
   const Layout = () => {
     return (
-      <div id='theme' className='light'>
+      <div id='theme' className={theme}>
         <div className="main">
-          <Sidebar />
+          <Sidebar theme={theme} updateTheme={updateTheme} />
           <div className="container">
             <Header />
             <div className="pages">

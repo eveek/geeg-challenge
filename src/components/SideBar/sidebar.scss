@@ -21,6 +21,13 @@
                 filter: invert(100%);
             }
         }
+        .theme {
+            #dark {
+                img {
+                    filter: invert(120%);
+                }
+            }
+        }
     }
 }
 
@@ -122,6 +129,15 @@
                 transition: top .5s;
                 // display: none;
             }
+
+            #toggler.light {
+                top: 2px;
+                transition: top .5s;
+            }
+            #toggler.dark {
+                top: 48px;
+                transition: top .5s;
+            }
         }
     }
 
@@ -140,6 +156,9 @@
 
     .close {
         display: none;
+        button {
+            background-color: transparent;
+        }
     }
 }
 
